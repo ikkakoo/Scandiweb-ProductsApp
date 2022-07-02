@@ -1,9 +1,9 @@
 <?php
     class Template {
-        // path to the template
+        // path to template
         protected $template;
 
-        // vars passed in
+        // variables passed in
         protected $vars = [];
 
         // constructor
@@ -12,19 +12,18 @@
             $this->template = $template;
         }
 
-        // getter for variables
+        // getter func for vars
         public function __get($name)
         {
             return $this->vars[$name];
         }
 
-        // setter for variables
+        // setter func for vars
         public function __set($name, $value)
         {
             $this->vars[$name] = $value;
         }
-
-        // tostring metod to convert vars to strings
+        // to string method for vars
         public function __toString()
         {
             extract($this->vars);
@@ -32,7 +31,7 @@
             ob_start();
 
             include basename($this->template);
-            
-            ob_get_clean();
+
+            return ob_get_clean();
         }
-    }
+    } 
