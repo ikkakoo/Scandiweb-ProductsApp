@@ -28,5 +28,31 @@
             $results = $this->db->result_set();
             return $results;
         }
+
+        public function add_product($product_data) {
+            $this->db->query("INSERT INTO products (products.sku, products.name, products.price, products.type, products.attribute) VALUES (:sku, :name, :price, :type, :attribute);");
+
+            $this->db->bind(':sku', $product_data['sku']);
+            $this->db->bind(':name', $product_data['name']);
+            $this->db->bind(':price', $product_data['price']);
+            $this->db->bind(':type', $product_data['type']);
+            $this->db->bind(':attribute', $product_data['attribute']);
+
+            if ($this->db->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function delete($delete_skus) {
+            $this->db->query("DELETE FROM products WHERE products.sku = '$delete_skus'");
+
+            if ($this->db->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>

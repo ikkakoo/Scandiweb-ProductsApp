@@ -14,15 +14,17 @@
         <div class="container-fluid ">
             <span class="navbar-brand mb-0 h1">
                 <?php if(explode('/',$_SERVER['PHP_SELF'])[count(explode('/',$_SERVER['PHP_SELF'])) - 1] == 'index.php'): ?>
-                    <?php echo PRODUCTS; ?>
+                    <a href="index.php" style="cursor: pointer;"><?php echo PRODUCTS; ?></a>
                 <?php else: ?>
-                    <?php echo ADD_PRODUCT; ?>    
+                    <a href="index.php" style="cursor: pointer;"><?php echo ADD_PRODUCT; ?>  </a>  
                 <?php endif; ?>
             </span>
             <?php if(explode('/',$_SERVER['PHP_SELF'])[count(explode('/',$_SERVER['PHP_SELF'])) - 1] == 'index.php'): ?>
                 <div class="d-flex gap-5">
                     <a href="add-product.php" class="btn btn-primary">Add</a>
-                    <button type="button" class="btn btn-danger" id="delete-product-btn">Mass Delete</button>
+                    <form action="index.php" method="post">
+                        <button type="submit" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn">Mass Delete</button>
+                    </form>
                 </div>
             <?php else : ?>
                 <div class="d-flex gap-5">
@@ -32,4 +34,5 @@
             <?php endif; ?>        
         </div>
     </nav>
+    <?php display_message(); ?>
     
