@@ -8,14 +8,10 @@
     $product = new Product;
 
     // mass delete
-    if (isset($_POST['delete-product-btn'])) {
-        if (!empty($_POST['prod_delete_sku'])){
-            $all_skus = $_POST['prod_delete_sku'];
-            $extracted_sku = implode(',', $all_skus);
-            echo $extracted_sku;
-        } else {
-            echo 'checkboxes werent checked';
-        }
+    if (isset($_POST['prod_delete_sku'])) {
+            // $extracted_sku = implode(',', $_POST['prod_delete_sku']);
+            // echo $extracted_sku;
+            var_dump($_POST);
         // if ($product->delete($delete_skus)) {
         //     redirect('index.php', 'Products Deleted', 'success');
         // } else {
@@ -36,8 +32,6 @@
 
     
     $template->categories = $product->get_categories();
-
-    // if (isset($_POST))
 
     echo $template;
 ?>

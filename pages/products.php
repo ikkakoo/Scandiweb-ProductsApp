@@ -20,8 +20,8 @@
         <div class="card text-bg-light mb-3" style="width: 18rem;">
             <div class="card-header d-flex justify-content-between">
                 <div><?php echo $product->type ?></div>
-                <form action="index.php" method="post">
-                    <input type="checkbox" class="delete-checkbox" name="prod_delete_skuprod_delete_sku[]" value="<?= $product->sku; ?>" style="width: 1.2em;">
+                <form action="index.php" method="post" name="check">
+                    <input type="checkbox" class="delete-checkbox" name="prod_delete_sku[]" value="<?= $product->sku; ?>" style="width: 1.2em;">
                 </form>
             </div>
             <div class="card-body">

@@ -23,7 +23,7 @@
                 <div class="d-flex gap-5">
                     <a href="add-product.php" class="btn btn-primary">Add</a>
                     <form action="index.php" method="post">
-                        <button type="submit" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn">Mass Delete</button>
+                        <input type="button" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn" value="Mass Delete">
                     </form>
                 </div>
             <?php else : ?>
