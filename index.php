@@ -8,10 +8,10 @@
     $product = new Product;
 
     // mass delete
-    if (isset($_POST['prod_delete_sku'])) {
-            // $extracted_sku = implode(',', $_POST['prod_delete_sku']);
-            // echo $extracted_sku;
-            var_dump($_POST);
+    if (isset($_POST['delete'])) {
+        $extracted_sku = implode(',', $_POST['delete']);
+        echo $extracted_sku;
+
         // if ($product->delete($delete_skus)) {
         //     redirect('index.php', 'Products Deleted', 'success');
         // } else {
