@@ -14,8 +14,14 @@
         $product_data['name'] = $_POST['name'];
         $product_data['type'] = $_POST['type'];
         $product_data['price'] = $_POST['price'];
-        $product_data['attribute'] = $_POST['attribute'];
-
+        if ($product_data['type'] === 'Furniture') {
+            $product_data['attribute'] = $_POST['height'] . 'x' . $_POST['width'] . 'x' . $_POST['length'];
+        } else {
+            $product_data['attribute'] = $_POST['attribute'];
+        }
+        
+        
+        // print_r($product_data);
         if ($product->add_product($product_data)) {
             redirect('index.php', 'Your Product Has Been Added', 'success');
         } else {

@@ -9,14 +9,14 @@
 
     // mass delete
     if (isset($_POST['delete'])) {
-        $extracted_sku = implode(',', $_POST['delete']);
-        echo $extracted_sku;
-
-        // if ($product->delete($delete_skus)) {
-        //     redirect('index.php', 'Products Deleted', 'success');
-        // } else {
-        //     redirect('index.php', 'Something Went Wrong, Products Not Deleted', 'error');
-        // }
+        $selected_skus = $_POST['delete'];
+        // $extracted_skus = implode(',', $selected_skus);
+        
+        if ($product->delete($selected_skus)) {
+            redirect('index.php', "Selected Product(s) Has Been Deleted", 'success');
+        } else {
+            redirect('index.php', 'Something Went Wrong, Products Not Deleted', 'error');
+        }
     }
 
     // instantiate Template class to create first page products

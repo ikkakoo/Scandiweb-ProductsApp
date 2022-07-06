@@ -1,11 +1,10 @@
 <?php 
     include 'include_files/header.php';
-    $category_index = 1;
 ?>
 <div class="container">
     <form method="post" action="add-product.php" id="product_form">
         <div class="form-group">
-            <label>SKU</label>
+            <label for="sku">SKU</label>
             <input type="text" class="form-control" name="sku" id="sku">
         </div>
         <br>
@@ -21,14 +20,14 @@
         <br>
         <div class="form-group">
             <label>Type Switcher</label>
-            <select name="type" class="form-select" id="productType">
-                <option value="0">Choose Type To Filter</option>
+            <select name="type" class="form-select" id="productType" name="productType">
+                <option value="<?php echo isset($_POST['type']) ? $_POST['type'] : 'Please Select Product Type...' ?>"><?php echo isset($_POST['type']) ? $_POST['type'] : 'Please Select Product Type...' ?></option>
                 <?php foreach ($categories as $category) : ?>
                     <option value="<?php echo $category->type?>"><?php echo $category->type ?></option>
                 <?php endforeach ; ?>
             </select>
             <br>
-            <input type="submit" class="btn btn-sm btn-success" value="Select">
+            <button type="submit" class="btn btn-sm btn-success">Select</button>
             <?php     // type switcher
                 if (isset($_POST['type'])) {
                     $type = $_POST['type'];
@@ -41,27 +40,28 @@
         <div>
             <?php if ($type == 'Book'): ?>
                 <label>Weight (kg)</label>
-                <input type="text" class="form-control" name="attribute" id="weight">
-            <?php elseif ($type == 'Disc'): ?>
+                <input type="text" class="form-control" name="attribute" id="weight" placeholder="Please Provide Weight in (kg)">
+            <?php elseif ($type == 'DVD'): ?>
                 <label>Size (mb)</label>
-                <input type="text" class="form-control" name="attribute" id="size">
+                <input type="text" class="form-control" name="attribute" id="size" placeholder="Please Provide Size in (mb)">
             <?php elseif($type == 'Furniture'): ?>
                 <label>Height (cm)</label>
-                <input type="text" class="form-control" name="attribute" id="height">
+                <input type="text" class="form-control" name="height" id="height" placeholder="Please Provide Height in (cm)">
                 <label>Width (cm)</label>
-                <input type="text" class="form-control" name="attribute" id="width">
+                <input type="text" class="form-control" name="width" id="width" placeholder="Please Provide Width in (cm)">
                 <label>Length (cm)</label>
-                <input type="text" class="form-control" name="attribute" id="length">
+                <input type="text" class="form-control" name="length" id="length" placeholder="Please Provide Length in (cm)">
             <?php else: ?>
                 <?php echo "Please Select Product Type" ?>      
             <?php endif; ?>    
         </div>
-        <input type="submit" name="submit" class="btn btn-secondary" value="Submit" id="">
+        <br>
+        <input type="submit" name="submit" class="btn btn-secondary" value="Save" id="submit-product-form">
     </form>
 </div>
 
 
 
-<?php 
+<?php
     include 'include_files/footer.php';
 ?>

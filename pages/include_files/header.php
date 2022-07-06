@@ -24,12 +24,20 @@
                     <a href="add-product.php" class="btn btn-primary">Add</a>
                     <form action="index.php" method="post">
                         <input type="button" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn" value="Mass Delete">
+                        
                     </form>
+                    <div class="d-flex gap-1 align-items-center">
+                        <input type="checkbox" name="select-all" id="select-all" style="width: 2em;">
+                        <label for="select-all" class="form-check-label">Toggle All</label>
+                    </div>
+                    
                 </div>
             <?php else : ?>
                 <div class="d-flex gap-5">
-                    <button type="button" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-danger">Cancel</button>
+                    <form method="post" action="add-product.php">
+                        
+                    </form>
+                    <a class="btn btn-danger" href="index.php">Cancel</a>
                 </div>
             <?php endif; ?>        
         </div>
