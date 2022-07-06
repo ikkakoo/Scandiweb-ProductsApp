@@ -50,9 +50,7 @@
                 <label>Width (cm)</label>
                 <input type="text" class="form-control" name="width" id="width" placeholder="Please Provide Width in (cm)">
                 <label>Length (cm)</label>
-                <input type="text" class="form-control" name="length" id="length" placeholder="Please Provide Length in (cm)">
-            <?php else: ?>
-                <?php echo "Please Select Product Type" ?>      
+                <input type="text" class="form-control" name="length" id="length" placeholder="Please Provide Length in (cm)">    
             <?php endif; ?>    
         </div>
         <br>

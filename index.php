@@ -10,9 +10,10 @@
     // mass delete
     if (isset($_POST['delete'])) {
         $selected_skus = $_POST['delete'];
-        // $extracted_skus = implode(',', $selected_skus);
+        $extracted_skus = "'" . implode("', '", $selected_skus) . "'";
         
-        if ($product->delete($selected_skus)) {
+        // print_r($extracted_skus);
+        if ($product->delete($extracted_skus)) {
             redirect('index.php', "Selected Product(s) Has Been Deleted", 'success');
         } else {
             redirect('index.php', 'Something Went Wrong, Products Not Deleted', 'error');

@@ -46,8 +46,7 @@
         }
 
         public function delete($delete_skus) {
-            foreach ($delete_skus as $sku) {
-            $this->db->query("DELETE FROM products WHERE sku IN ('$sku,')");}
+            $this->db->query("DELETE FROM products WHERE sku IN ($delete_skus)");
 
             if ($this->db->execute()) {
                 return true;
