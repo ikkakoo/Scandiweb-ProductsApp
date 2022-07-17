@@ -10,15 +10,6 @@ if (document.body.contains(document.getElementById('delete-product-btn'))) {
 }
 
 
-// submit product_form
-// const productFormSubmitBtn = document.getElementById('submit-product-form')
-// const productForm = document.getElementById('product_form')
-
-// productFormSubmitBtn.addEventListener('click', () => {
-//     productForm.submit();
-// })
-
-
 
 
 // check all boxes on products list page
@@ -40,15 +31,38 @@ if (document.body.contains(document.getElementById('select-all'))) {
     })
 }
 
+//sadsadasdasadsa
+function setAttributes(el, attrs) {
+    for(let key in attrs) {
+      el.setAttribute(key, attrs[key]);
+    }
+  }
 
-// form validation
-const skuInp = document.getElementById('sku');
-const nameInp = document.getElementById('name');
-const priceInp = document.getElementById('price');
+function getSelectedValue () {
+    let selectedValue = document.getElementById('productType').value;
+    let a = document.getElementById('selectedValueInp');
+    const furnitureDimensions = document.getElementById('furniture-inputs');
+    const size = document.getElementById('#size');
+    const weight = document.getElementById('#weight');
 
-const saveBtn = document.getElementById('submit-product-form');
+    if (selectedValue == 'Book') {
+        size.classList.add('hidden')
+        furnitureDimensions.classList.add('hidden')
+        weight.classList.remove('hidden')
+        
+    } else if (selectedValue == 'DVD') {
+        weight.classList.add('hidden')
+        furnitureDimensions.classList.add('hidden')
+        size.classList.remove('hidden')
+    } else if (selectedValue == 'Furniture') {
+        weight.classList.add('hidden')
+        size.classList.add('hidden')
+        furnitureDimensions.classList.remove('hidden')
+    } else {
+        weight.classList.add('hidden')
+        size.classList.add('hidden')
+        furnitureDimensions.classList.add('hidden')
+    }
 
-saveBtn.addEventListener('click', () => {
-    console.log(document.forms['product_form']['sku'].value);
-})
+}
 
