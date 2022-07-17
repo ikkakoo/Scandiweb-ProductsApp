@@ -14,9 +14,9 @@
         <div class="container-fluid ">
             <span class="navbar-brand mb-0 h1">
                 <?php if(explode('/',$_SERVER['PHP_SELF'])[count(explode('/',$_SERVER['PHP_SELF'])) - 1] == 'index.php'): ?>
-                    <a href="index.php" style="cursor: pointer;"><?php echo PRODUCTS; ?></a>
+                    <a href="index.php"><?php echo PRODUCTS; ?></a>
                 <?php else: ?>
-                    <a href="index.php" style="cursor: pointer;"><?php echo ADD_PRODUCT; ?>  </a>  
+                    <span href="index.php" style="font-weight: bold;"><?php echo ADD_PRODUCT; ?>  </span>  
                 <?php endif; ?>
             </span>
             <?php if(explode('/',$_SERVER['PHP_SELF'])[count(explode('/',$_SERVER['PHP_SELF'])) - 1] == 'index.php'): ?>
@@ -34,10 +34,7 @@
                 </div>
             <?php else : ?>
                 <div class="d-flex gap-5">
-                    <form method="post" action="add-product.php">
-                        
-                    </form>
-                    <a class="btn btn-danger" href="index.php">Cancel</a>
+                    <a href="index.php" style="cursor: pointer; font-weight: bold">Back To Main Page</a>
                 </div>
             <?php endif; ?>        
         </div>
