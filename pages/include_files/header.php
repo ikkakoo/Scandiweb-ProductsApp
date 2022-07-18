@@ -21,9 +21,9 @@
             </span>
             <?php if(explode('/',$_SERVER['PHP_SELF'])[count(explode('/',$_SERVER['PHP_SELF'])) - 1] == 'index.php'): ?>
                 <div class="d-flex gap-5">
-                    <a href="add-product.php" class="btn btn-primary">Add</a>
+                    <a href="add-product.php" class="btn btn-primary">ADD</a>
                     <form action="index.php" method="post">
-                        <input type="button" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn" value="Mass Delete">
+                        <input type="button" class="btn btn-danger" id="delete-product-btn" name="delete-product-btn" value="MASS DELETE">
                         
                     </form>
                     <div class="d-flex gap-1 align-items-center">

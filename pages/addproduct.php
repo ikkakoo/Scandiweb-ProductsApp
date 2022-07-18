@@ -99,8 +99,8 @@
    
 ?>
 
-<div class="container">
-    <form method="post" action="add-product.php" id="#product_form" name="product_form">
+<div class="container" id="#product_form">
+    <form method="post" action="add-product.php" name="product_form">
         <div class="form-group">
             <label for="sku">SKU</label>
             <input type="text" class="form-control <?php echo $sku_error ?  'is-invalid' : null;?>" name="sku" id="sku">
@@ -137,26 +137,26 @@
             <br>
         </div>
         <div id="selectedValueInp">
-            <div name="weight" id="#weight" class="hidden">
-                <input type="text" class="form-control <?php echo $weight_error ?  'is-invalid' : null;?>" placeholder="Please Provide Weight in (kg)">
+            <div id="#weight" class="hidden">
+                <input type="text" name="weight" class="form-control <?php echo $weight_error ?  'is-invalid' : null;?>" placeholder="Please Provide Weight in (kg)">
                 <div class="invalid-feedback">
                     <?php echo $weight_error; ?>
                 </div>
             </div>
 
-            <div name="size" id="#size" class="hidden">
-                <input type="text" class="form-control <?php echo $size_error ?  'is-invalid' : null;?>" placeholder="Please Provide Size in (mb)">
+            <div id="#size" class="hidden">
+                <input type="text" name="size" class="form-control <?php echo $size_error ?  'is-invalid' : null;?>" placeholder="Please Provide Size in (mb)">
                 <div class="invalid-feedback">
                     <?php echo $size_error; ?>
                 </div>
             </div>
 
-            <div class="hidden" id="furniture-inputs">
-                <input type="text" class="form-control <?php echo $height_error ?  'is-invalid' : null;?>" name="height" id="#height" placeholder="Please Provide Height in (cm)">
+            <div id="furniture-inputs" class="hidden">
+                <input type="text" class="form-control <?php echo $height_error ?  'is-invalid' : null;?> mb-1" name="height" id="#height" placeholder="Please Provide Height in (cm)">
                 <div class="invalid-feedback">
                     <?php echo $height_error; ?>
                 </div>
-                <input type="text" class="form-control <?php echo $width_error ?  'is-invalid' : null;?>" name="width" id="#width" placeholder="Please Provide Width in (cm)">
+                <input type="text" class="form-control <?php echo $width_error ?  'is-invalid' : null;?> mb-1" name="width" id="#width" placeholder="Please Provide Width in (cm)">
                 <div class="invalid-feedback">
                     <?php echo $width_error; ?>
                 </div>

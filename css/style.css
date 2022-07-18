@@ -4,8 +4,3 @@ a {
 .hidden {
     display: none;
 }
-.furniture-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}

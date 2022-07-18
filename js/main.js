@@ -39,8 +39,7 @@ function setAttributes(el, attrs) {
   }
 
 function getSelectedValue () {
-    let selectedValue = document.getElementById('productType').value;
-    let a = document.getElementById('selectedValueInp');
+    const selectedValue = document.getElementById('productType').value;
     const furnitureDimensions = document.getElementById('furniture-inputs');
     const size = document.getElementById('#size');
     const weight = document.getElementById('#weight');
