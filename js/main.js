@@ -41,8 +41,8 @@ function setAttributes(el, attrs) {
 function getSelectedValue () {
     const selectedValue = document.getElementById('productType').value;
     const furnitureDimensions = document.getElementById('furniture-inputs');
-    const size = document.getElementById('#size');
-    const weight = document.getElementById('#weight');
+    const size = document.getElementById('size');
+    const weight = document.getElementById('weight');
 
     if (selectedValue == 'Book') {
         size.classList.add('hidden')
