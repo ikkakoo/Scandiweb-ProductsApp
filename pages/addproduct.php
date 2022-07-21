@@ -1,10 +1,9 @@
 <?php 
     include 'include_files/header.php';
     require_once '../helpers/system_helper.php';
-    require_once '../libraries/Validator.php'
-?>
+    require_once '../libraries/Validator.php';
 
-<?php
+
     $new_product = new Product;
 
     if (isset($_POST['submit'])) {

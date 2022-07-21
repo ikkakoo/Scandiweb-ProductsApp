@@ -34,7 +34,7 @@
                 </div>
             <?php else : ?>
                 <div class="d-flex gap-5">
-                    <a href="index.php" style="cursor: pointer; font-weight: bold">Back To Main Page</a>
+                    <a href="index.php" class="btn btn-danger" style="cursor: pointer; font-weight: bold">Cancel</a>
                 </div>
             <?php endif; ?>        
         </div>
