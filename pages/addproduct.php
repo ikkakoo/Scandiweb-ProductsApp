@@ -38,7 +38,7 @@
     }
 ?>
 
-<div class="container" id="#product_form">
+<div class="container" id="product_form">
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="product_form">
         <div class="form-group">
             <label for="sku">SKU</label>
