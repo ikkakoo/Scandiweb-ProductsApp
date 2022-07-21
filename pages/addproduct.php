@@ -76,15 +76,15 @@
             <br>
         </div>
         <div id="selectedValueInp">
-            <div id="weight" class="hidden">
-                <input type="text" name="weight" class="form-control" placeholder="Please Provide Weight in (kg)">
+            <div id="weight-input" class="hidden">
+                <input type="text" name="weight" id="weight" class="form-control" placeholder="Please Provide Weight in (kg)">
                 <div class="invalid-feedback">
                     
                 </div>
             </div>
 
-            <div id="size" class="hidden">
-                <input type="text" name="size" class="form-control" placeholder="Please Provide Size in (mb)">
+            <div id="size-input" class="hidden">
+                <input type="text" name="size" id="size" class="form-control" placeholder="Please Provide Size in (mb)">
                 <div class="invalid-feedback">
                    
                 </div>
