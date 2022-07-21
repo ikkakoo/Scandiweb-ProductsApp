@@ -31,7 +31,7 @@ if (document.body.contains(document.getElementById('select-all'))) {
     })
 }
 
-//sadsadasdasadsa
+//change form
 function setAttributes(el, attrs) {
     for(let key in attrs) {
       el.setAttribute(key, attrs[key]);

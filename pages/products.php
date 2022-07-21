@@ -15,7 +15,7 @@
 
 
 
-    <form action="index.php" method="post" name="check" id="checkbox-form">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="check" id="checkbox-form">
         <div class="d-flex justify-content-center flex-wrap gap-5 p-5">        
             <?php foreach($products as $product): ?>
                 <div class="card text-bg-light mb-3" style="width: 18rem;">
