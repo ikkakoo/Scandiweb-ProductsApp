@@ -76,14 +76,14 @@
             <br>
         </div>
         <div id="selectedValueInp">
-            <div id="#weight" class="hidden">
+            <div id="weight" class="hidden">
                 <input type="text" name="weight" class="form-control" placeholder="Please Provide Weight in (kg)">
                 <div class="invalid-feedback">
                     
                 </div>
             </div>
 
-            <div id="#size" class="hidden">
+            <div id="size" class="hidden">
                 <input type="text" name="size" class="form-control" placeholder="Please Provide Size in (mb)">
                 <div class="invalid-feedback">
                    
@@ -91,15 +91,15 @@
             </div>
 
             <div id="furniture-inputs" class="hidden">
-                <input type="text" class="form-control mb-1" name="height" id="#height" placeholder="Please Provide Height in (cm)">
+                <input type="text" class="form-control mb-1" name="height" id="height" placeholder="Please Provide Height in (cm)">
                 <div class="invalid-feedback">
                     
                 </div>
-                <input type="text" class="form-control mb-1" name="width" id="#width" placeholder="Please Provide Width in (cm)">
+                <input type="text" class="form-control mb-1" name="width" id="width" placeholder="Please Provide Width in (cm)">
                 <div class="invalid-feedback">
                     
                 </div>
-                <input type="text" class="form-control " name="length" id="#length" placeholder="Please Provide Length in (cm)">
+                <input type="text" class="form-control " name="length" id="length" placeholder="Please Provide Length in (cm)">
                 <div class="invalid-feedback">
                     
                 </div>
