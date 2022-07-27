@@ -60,7 +60,7 @@ class Validator {
         if (empty($value)) {
             $this->push_error('price', 'Price can not be empty');
         } else{
-            if ($value == 5){
+            if (!is_numeric($value)){
                 $this->push_error('price', 'Price must be numeric');
             }
         } 
