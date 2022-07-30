@@ -2,7 +2,7 @@
     include 'include_files/header.php';
 ?>
 
-    <form action="index.php" method="GET" class="container d-flex flex-column gap-1 mt-2">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET" class="container d-flex flex-column gap-1 mt-2">
         <select name="category" class="form-select">
             <option value="0">Choose Type To Filter</option>
             <?php foreach ($categories as $category) : ?>

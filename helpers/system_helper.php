@@ -1,6 +1,6 @@
 <?php 
     // redirect function
-    function redirect ($page = false, $message = null, $message_type = null) {
+    function redirect ($page = null, $message = null, $message_type = null) {
         if (is_string($page)) {
             $location = $page;
         } else {
@@ -19,8 +19,8 @@
             $_SESSION['message_type'] = $message_type;
         }
 
-        header ('Location: ' . $location);
-        exit();
+        header ("Location: $location");
+        exit;
     }
 
     function display_message() {
