@@ -10,7 +10,7 @@
 
     // instantiate Template class to create add-product page
     $template = new Template('pages/addproduct.php');
-   
+
     $template->categories = $product->get_categories();
     // $template->errors = 
 

@@ -31,7 +31,6 @@
         $template->products = $product->get_all_products();
     }
 
-    
     $template->categories = $product->get_categories();
 
     echo $template;
