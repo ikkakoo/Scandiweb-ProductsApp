@@ -32,14 +32,17 @@ class Validator {
 
     public function validate_sku() {
         $value = trim($this->data['sku']);
-
+        $product = new Product;
+        $exists = $product->get_row_count($value);
         if (empty($value)) {
             $this->push_error('sku', 'SKU can not be empty');
-        } else{
+        } elseif ($product->get_row_count($value) > 0) {
+            $this->push_error('sku', 'Product with the given SKU already exists in the database');
+        } else {
             if (strlen($value) < 5) {
                 $this->push_error('sku', 'SKU must be at least 5 chars');
             }
-        } 
+        }   
     }
 
     public function validate_name() {

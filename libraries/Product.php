@@ -54,5 +54,12 @@
                 return false;
             }
         }
+
+        public function get_row_count($sku) {
+            $this->db->query("SELECT * FROM products WHERE sku = '$sku'");
+
+            $rows = $this->db->row_count();
+            return $rows;
+        }
     }
 ?>

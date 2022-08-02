@@ -10,7 +10,7 @@
         $validation = new Validator($_POST);
 
         $errors = $validation->validate_form();
-        // var_dump($_POST);
+        // print_r($_POST);
 
         // insert into db if errors is empty
         if (empty($errors)) {
@@ -77,31 +77,31 @@
         </div>
         <div id="selectedValueInp">
             <div id="weight-input" class="hidden">
-                <input type="text" name="weight" id="weight" class="form-control" placeholder="Please Provide Weight in (kg)">
+                <input type="number" name="weight" id="weight" class="form-control <?php echo $errors['attribute'] ?  'is-invalid' : null;?>" placeholder="Please Provide Weight in (kg)">
                 <div class="invalid-feedback">
-                    
+                    <?php echo $errors['attribute'] ?? ''; ?>
                 </div>
             </div>
 
             <div id="size-input" class="hidden">
-                <input type="text" name="size" id="size" class="form-control" placeholder="Please Provide Size in (mb)">
+                <input type="number" name="size" id="size" class="form-control <?php echo $errors['attribute'] ?  'is-invalid' : null;?>" placeholder="Please Provide Size in (mb)">
                 <div class="invalid-feedback">
-                   
+                    <?php echo $errors['attribute'] ?? ''; ?>
                 </div>
             </div>
 
             <div id="furniture-inputs" class="hidden">
-                <input type="text" class="form-control mb-1" name="height" id="height" placeholder="Please Provide Height in (cm)">
+                <input type="number" class="form-control mb-1 <?php echo $errors['attribute'] ?  'is-invalid' : null;?>" name="height" id="height" placeholder="Please Provide Height in (cm)">
                 <div class="invalid-feedback">
-                    
+                    <?php echo $errors['attribute'] ?? ''; ?>
                 </div>
-                <input type="text" class="form-control mb-1" name="width" id="width" placeholder="Please Provide Width in (cm)">
+                <input type="number" class="form-control mb-1 <?php echo $errors['attribute'] ?  'is-invalid' : null;?>" name="width" id="width" placeholder="Please Provide Width in (cm)">
                 <div class="invalid-feedback">
-                    
+                    <?php echo $errors['attribute'] ?? ''; ?>
                 </div>
-                <input type="text" class="form-control " name="length" id="length" placeholder="Please Provide Length in (cm)">
+                <input type="number" class="form-control <?php echo $errors['attribute'] ?  'is-invalid' : null;?>" name="length" id="length" placeholder="Please Provide Length in (cm)">
                 <div class="invalid-feedback">
-                    
+                    <?php echo $errors['attribute'] ?? ''; ?>
                 </div>
             </div>
             

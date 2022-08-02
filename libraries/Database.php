@@ -69,6 +69,11 @@
             $this->execute();
             return $this->statement->fetch(PDO::FETCH_OBJ);
         }
+
+        public function row_count() {
+            $this->execute();
+            return $this->statement->rowCount();
+        }
     
     }
 ?>
